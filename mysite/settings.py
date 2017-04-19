@@ -25,7 +25,7 @@ SECRET_KEY = 'jb&(y@5%936$=yn%y(2dfpx_-=97+nivm1tq)1ckk45o4*@^x3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tsryu.pythonanywhere.com']
 
 
 # Application definition
