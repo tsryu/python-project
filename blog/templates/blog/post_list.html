@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>요시!</title>
-</head>
-<body>
-	 <h1>슬로워크 짱</h1>
-	<ul>
-		<li>파이썬은 쉬운건가</li>
-		<li>생각보다 어렵다</li>
-		<li>그래도 다른 언어보다는 괜찮은듯?</li>
-	</ul>	
-</body>
-</html>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
